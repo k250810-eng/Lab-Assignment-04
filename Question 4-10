@@ -1,0 +1,138 @@
+#include <stdio.h>
+
+int main (void) {
+
+   int size;
+   //pizza number
+   int pizza;
+   char choice;
+   // total
+   int total;
+   // crust
+   int crust;
+   //cheese
+   char cheese [1];
+   // time
+   int time;
+   //student id
+   char std;
+
+   printf("-----Welcome to Giovanni's Pizza place----\n Lets Start Your Order: \n");
+
+   //size
+do {
+int subtotal=0;
+
+   printf("What size of pizza do you want? press:\n");
+   printf("1 for small (5$)\n2 for medium (7$)\n3 for large (10$)\n --->");
+   scanf("%d", &size);
+
+   if(size==1){
+    subtotal=5;
+}
+   else if(size==2){
+    subtotal=7;
+}
+   else if(size==3){
+    subtotal=10;
+}
+    else {
+    printf("invalid request \n");
+    continue;
+}
+
+ // number of pizzas
+
+   printf("How many of that type do you want? \n");
+   scanf("%d" , &pizza);
+   total += subtotal * pizza;
+
+ // crust
+
+   printf("What type of crust do you want?\n");
+   printf("press 1 for Regular crust (0$)\n press 2 for Thin Crust (1$)\n press 3 for stuffed crust (2$)\n --->");
+   scanf("%d", &crust);
+
+   while(crust<1||crust>3){
+
+     printf("invalid number try again! \n");
+     scanf("%d", &crust);
+     continue;
+}
+   if(crust==1){
+   total=total;
+}
+   else if(crust==2){
+   total += subtotal+(1*pizza);
+}
+
+   else if(crust==3){
+   total += subtotal+ (2*pizza);
+}
+
+
+   printf("do you want to buy more? Y/N \n");
+   scanf(" %c", &choice);
+  } while ( choice == 'y' || choice== 'Y');
+
+
+   // crust
+
+   printf("What type of crust do you want?\n");
+   printf("press 1 for Regular crust (0$)\n press 2 for Thin Crust (1$)\n press 3 for stuffed crust (2$)\n --->");
+
+   scanf("%d", &crust);
+
+     while
+  {
+       (crust>3 || crust<1);
+       printf("Invalid Selection try again \n");
+       scanf("%d", &crust);
+  }
+       if(crust==1);
+  {
+       total = total
+  }
+       else if(crust==2);
+  {
+       total = subtotal + 1
+       else if(crust==3);
+  {
+       total = total + (pizza*2);
+  }
+
+  // Cheese Part
+
+  printf("Great! now do you want cheese with that? Press Y or N \n");
+  scanf("%c", &cheese);
+
+     while
+  {
+      (cheese !=y || cheese !=Y || cheese !=n  || cheese !=N);
+      printf("It has to be a Y or N \n");
+      scanf("%c", &cheese);
+  }
+
+       if(cheese = Y || cheese = y);
+  {
+       total = total + 1.50;
+  }
+       else if(cheese = N || cheese = n);
+  {
+       total == total;
+  }
+
+  //  Time part
+
+  printf("Nice! Now what is the current hour? (24 Hour format) \n");
+  scanf("%d", &time);
+
+       if(11 < time < 14);
+  {
+       printf("You Get a special discount \n");
+       total = total * 0.90;
+  }
+
+ // Student Discount
+
+  printf("Optional but do you have a student discount? press Y or N \n");
