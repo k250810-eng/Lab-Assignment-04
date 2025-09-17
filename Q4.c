@@ -100,6 +100,7 @@ int main(void)
 if (pizza == 3 && crust == 3)
 {
     printf("🥳 You get free garlic bread!\n");
+    // No Emojis in console :( 
 }
 // cheese
    printf("Do you want cheese with that or no? Type Y or N \n --->");
@@ -174,4 +175,5 @@ scanf(" %c", &del);
      printf("Student discount: -%.2f$\n", stddis);
      printf("Delivery cost: %.2f$\n", delcost);
      printf("Total: %.2f$\n", total); 
+
     }
