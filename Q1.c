@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(void)
+{
+    int n;
+
+    printf("press:\n 1 for a small pizza \n 2 for a medium pizza \n 3 for a large pizza: \n");
+    scanf("%d",&n);
+
+    while (n > 3 || n < 1)
+    {
+        printf("Invalid size try again: \n");
+        if (scanf("%d", &n) != 1) return 1;
+    }
+
+   if(n == 1)
+   {printf("Here is a small pizza \n");}
+
+   else if(n == 2)
+   {printf("Here is a Medium pizza \n");}
+
+   else if(n == 3)
+   {printf("Here is a large pizza  \n");}
+
+    return 0;
+}
